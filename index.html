@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="A little birthday surprise for Jamal ❤️"
+    />
+
+    <title>For Jamal ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     MUSIC
+===================================================== -->
+
+    <audio id="bgMusic" loop>
+      <source src="music/birthday-song.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- MUSIC BUTTON -->
+
+    <button id="musicButton" class="music-button" onclick="toggleMusic()">
+      🎵
+    </button>
+
+    <!-- =====================================================
+     PAGE 1 — OPENING
+===================================================== -->
+
+    <section id="opening" class="page active">
+      <div class="opening-container">
+        <div class="gift-animation">🎁</div>
+
+        <p class="small-title">SOMEONE MADE SOMETHING SPECIAL FOR YOU</p>
+
+        <h1>
+          For Jamal
+          <span>❤️</span>
+        </h1>
+
+        <p class="opening-text">
+          It's not something expensive...
+
+          <br />
+
+          It's just a little surprise made especially for you. 🤍
+        </p>
+
+        <button class="main-button" onclick="openBirthday()">
+          OPEN YOUR GIFT 🎁
+        </button>
+
+        <p class="hint">🔊 Make sure your volume is on</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     PAGE 2 — BIRTHDAY
+===================================================== -->
+
+    <section id="birthday" class="page">
+      <div class="birthday-container">
+        <div class="sparkle">✨</div>
+
+        <p class="small-title">TODAY IS YOUR SPECIAL DAY</p>
+
+        <h1>HAPPY BIRTHDAY</h1>
+
+        <h2>JAMAL ❤️</h2>
+
+        <!-- PHOTO -->
+
+        <div class="main-photo-wrapper">
+          <img src="images/jamal.jpg" alt="Jamal" class="main-photo" />
+        </div>
+
+        <p class="birthday-intro">
+          Another year older...
+
+          <br />
+
+          but somehow, you're still cute. 😌
+        </p>
+
+        <button class="main-button" onclick="goToMemories()">
+          SEE OUR MEMORIES 📸
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     PAGE 3 — MEMORIES
+===================================================== -->
+
+    <section id="memories" class="page">
+      <div class="content-container">
+        <p class="small-title">LITTLE MOMENTS</p>
+
+        <h1>OUR MEMORIES 📸</h1>
+
+        <p class="section-description">
+          Maybe they're just ordinary pictures...
+
+          <br />
+
+          but somehow, they became special memories. 🤍
+        </p>
+
+        <div class="gallery">
+          <!-- PHOTO 1 -->
+
+          <div class="photo-card">
+            <img src="images/memory1.jpg" alt="Memory 1" />
+
+            <p>One of my favorite moments ❤️</p>
+          </div>
+
+          <!-- PHOTO 2 -->
+
+          <div class="photo-card">
+            <img src="images/memory2.jpg" alt="Memory 2" />
+
+            <p>A moment worth remembering ✨</p>
+          </div>
+
+          <!-- PHOTO 3 -->
+
+          <div class="photo-card">
+            <img src="images/memory3.jpg" alt="Memory 3" />
+
+            <p>Hopefully, there will be more. 🤍</p>
+          </div>
+        </div>
+
+        <button class="main-button" onclick="goToLetter()">
+          READ MY LETTER 💌
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     PAGE 4 — LETTER
+===================================================== -->
+
+    <section id="letter" class="page">
+      <div class="letter-container">
+        <div class="letter-paper">
+          <div class="letter-decoration">💌</div>
+
+          <h1>A LITTLE LETTER</h1>
+
+          <div id="typingText" class="typing-text"></div>
+
+          <button
+            id="letterButton"
+            class="main-button hidden-button"
+            onclick="goToQuestion()"
+          >
+            I HAVE ONE MORE THING... ❤️
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     PAGE 5 — QUESTION
+===================================================== -->
+
+    <section id="question" class="page">
+      <div class="question-container">
+        <div class="question-heart">❤️</div>
+
+        <h1>Can I Tell You One Last Thing?</h1>
+
+        <p>
+          It's a little embarrassing...
+
+          <br />
+
+          but I think you deserve to know.
+        </p>
+
+        <button class="main-button" onclick="showConfession()">
+          YES, TELL ME ❤️
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     PAGE 6 — CONFESSION
+===================================================== -->
+
+    <section id="confession" class="page">
+      <div class="confession-container">
+        <div class="big-heart">❤️</div>
+
+        <p class="small-title">MY LITTLE CONFESSION</p>
+
+        <h1>There's Something I Want You To Know</h1>
+
+        <div class="confession-text">
+          <p>Honestly...</p>
+
+          <p>I'm really happy that I got the chance to know you.</p>
+
+          <p>
+            And somehow, talking to you has become one of my favorite parts of
+            the day.
+          </p>
+
+          <p>I don't know what the future will look like...</p>
+
+          <p>
+            but I hope I can still be one of the people who makes you smile.
+          </p>
+
+          <p class="highlight">
+            Because you're someone I'm really happy I met. ❤️
+          </p>
+        </div>
+
+        <button class="main-button" onclick="finishBirthday()">
+          ONE LAST SURPRISE 🎁
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     PAGE 7 — FINAL
+===================================================== -->
+
+    <section id="final" class="page">
+      <div class="final-container">
+        <div class="confetti-title">🎉 🎉 🎉</div>
+
+        <div class="final-heart">❤️</div>
+
+        <h1>HAPPY BIRTHDAY, JAMAL!</h1>
+
+        <p class="final-message">
+          May this new chapter of your life bring you more happiness, more
+          beautiful memories, and more reasons to smile.
+        </p>
+
+        <p class="final-message">
+          Stay happy.
+
+          <br />
+
+          Stay pretty.
+
+          <br />
+
+          And please keep being you. 🤍
+        </p>
+
+        <div class="final-quote">"I'm really glad I met you."</div>
+
+        <p class="signature">— From someone who's happy to know you ❤️</p>
+
+        <div class="cake">🎂</div>
+
+        <button class="main-button" onclick="restartWebsite()">
+          ↻ WATCH AGAIN
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
